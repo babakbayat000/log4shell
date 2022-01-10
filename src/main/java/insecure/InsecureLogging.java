@@ -1,11 +1,13 @@
-package com.mycompany.app;
+package insecure;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * Hello world!
- *
+ * Demo of Software Composition Analysis with SonarQube
+ * integration with dependency-check
+ * See log4shell vulnerability detected on log4j dependency
+ * in pom.xml file
  */
 public class InsecureLogging 
 {

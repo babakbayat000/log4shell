@@ -25,6 +25,17 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <!--
+    The "Log4shell" news revealed that many versions of log4j are vulnerable to CVE-2021-44228
+    including the below version 2.12.0.
+    - > Install SonarQube dependency-check plugin
+    - > Run an analysis: mvn clean verify org.owasp:dependency-check-maven:check sonar:sonar -Dlicense.skip=true
+    - > See the vulnearbility reported in SonarQube on the pom.xml file
+    - > Upgrade the below dependency to 2.17.1 (not vulnerable)
+    - > Run analysis again
+    - > The vulnerability is gone !
+    Same pattern applies to all sorts of project dependencies detectable with dependency-check
+    -->
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-api</artifactId>
