@@ -1,2 +1,4 @@
-bin/
-target/
+maven-example/bin/
+maven-example/target/
+gradle-example/build/
+gradle-example/.gradle/

@@ -1,0 +1,35 @@
+plugins {
+    id "java"
+    id "application"
+    id "org.sonarqube" version "3.0"
+    id 'org.owasp.dependencycheck' version "6.5.2"
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+description = 'Example of SonarQube analysis with Dependency Check'
+version = '1.0'
+
+sonarqube {
+    properties {
+        property 'sonar.projectName', 'log4shell - Gradle example'
+        property 'sonar.projectKey', 'demo:log4shell-gradle'
+        property 'sonar.dependencyCheck.htmlReportPath','build/reports/dependency-check-report.html'
+        property 'sonar.dependencyCheck.jsonReportPath','build/reports/dependency-check-report.json'
+    }
+}
+dependencyCheck {
+    format='ALL'
+}
+
+dependencies {
+    // This dependency is found on compile classpath of this component and consumers.
+  compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.12.0'
+  compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.12.0'
+}
+
+// Define the main class for the application
+mainClassName = 'Insecure'
