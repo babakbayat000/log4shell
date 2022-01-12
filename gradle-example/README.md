@@ -16,28 +16,16 @@ log4shell is just an example, this demo aims at showing the integration of any S
    gradle example
 
 3. Configure the SonarQube dependency-check plugin to look for the generated JSON and HTML reports in the expected locations. This is achieved with the
-   2 properties `sonar.dependencyCheck.htmlReportPath` and `sonar.dependencyCheck.jsonReportPath` (see again [pom.xml](maven-example/pom.xml) or [build.gradle](gradle-example/build.gradle))
+   2 properties `sonar.dependencyCheck.htmlReportPath` and `sonar.dependencyCheck.jsonReportPath` (see again [pom.xml][build.gradle](build.gradle))
 
-3. Run analysis (with Maven or Gradle, see below)
+3. Run analysis
 
-## With Maven
-
-- Under the `maven-example` directory simply run: `mvn clean verify org.owasp:dependency-check-maven:check sonar:sonar -Dlicense.skip=true`
-- Browse to your project in SonarQube and check the list of vulnerabilities. At least one should be attached to the `pom.xml`file that holds
-  the dependency to log4j 2.12.0
-
-- In the [pom.xml](maven-example/pom.xml) file, you may replace the dependency on log4j 2.12.0 by 2.17.1 (that fixes the log4shell vulnerability)
-
-- Re-run the analysis as per the above, and the vulnerability will be gone in SonarQube.
-
-## With Gradle
-
-- Under the `gradle-example` directory simply run: `./gradlew dependencyCheckAnalyze sonarqube`
+- Run: `./gradlew dependencyCheckAnalyze sonarqube`
 
 - Browse to your project in SonarQube and check the list of vulnerabilities. At least one should be attached to project itself that holds
   the dependency to log4j 2.12.0
 
-- In the [build.gradle](gradle-example/build.gradle) file, you may replace the dependency on log4j 2.12.0 by 2.17.1 (that fixes the log4shell vulnerability)
+- In the [build.gradle](build.gradle) file, you may replace the dependency on log4j 2.12.0 by 2.17.1 (that fixes the log4shell vulnerability)
 
 - Re-run the analysis as per the above, and the vulnerability will be gone in SonarQube.
   

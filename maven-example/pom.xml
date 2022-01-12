@@ -5,17 +5,17 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>demo</groupId>
-  <artifactId>log4shell-detect</artifactId>
+  <artifactId>sca-log4shell-detect-maven</artifactId>
   <version>1.0</version>
 
-  <name>Log4shell detect</name>
+  <name>SCA demo - Log4shell detect - Maven</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <sonar.dependencyCheck.htmlReportPath>build/reports/dependency-check-report.html</sonar.dependencyCheck.htmlReportPath>
+    <sonar.dependencyCheck.jsonReportPath>build/reports/dependency-check-report.json</sonar.dependencyCheck.jsonReportPath>
   </properties>
 
   <dependencies>
@@ -104,7 +104,7 @@
           <artifactId>dependency-check-maven</artifactId>
           <version>6.5.2</version>
           <configuration>
-            <formats>XML,HTML,JSON</formats>
+            <format>ALL</format>
           </configuration>
           <executions>
             <execution>
