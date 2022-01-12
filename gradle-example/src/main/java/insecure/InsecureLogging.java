@@ -16,6 +16,6 @@ public class InsecureLogging
 	private void runMe(String parameter){
 
 		System.out.println(parameter);
-		
+
 	}
 }
