@@ -19,7 +19,7 @@ log4shell is just an example, this demo aims at showing the integration of any S
 
 3. Run analysis
 
-- Run: `./gradlew dependencyCheckAnalyze sonarqube`
+- Run: `./gradlew dependencyCheckAnalyze sonarqube -Dsonar.sources=src,build.gradle`
 
 - Browse to your project in SonarQube and check the list of vulnerabilities. At least one should be attached to **the project itself** (unlike for maven where the vulnerability is attached to the `pom.xml` file) that holds
   the dependency to log4j 2.12.0. You should get something like below
