@@ -24,7 +24,7 @@ This capability is independent of any commercial feature. It works will all edit
 
 3. Run analysis
 
-- Run: `./gradlew dependencyCheckAnalyze sonarqube -Dsonar.sources=src,build.gradle`
+- Run: `./gradlew dependencyCheckAnalyze sonarqube`
 
 - Browse to your project in SonarQube and check the list of vulnerabilities. At least one should be attached to **the project itself** (unlike for maven where the vulnerability is attached to the `pom.xml` file) that holds
   the dependency to log4j 2.12.0. You should get something like below
