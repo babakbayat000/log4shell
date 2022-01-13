@@ -10,6 +10,8 @@ This site provides this list that can be downloaded/updated at any time.
 
 log4shell is just an example, this demo aims at showing the integration of any SCA (Software Composition Analysis) tool with SonarQube, that out of the box only provides SAST (Static Application Security Testing) security
 
+This capability is independent of any commercial feature. It works will all editions of SonarQube, including the Community Edition
+
 ## Steps to demo:
 
 1. Install the [SonarQube dependency-check plugin](https://github.com/dependency-check/dependency-check-sonar-plugin/releases) on your SonarQube platform
