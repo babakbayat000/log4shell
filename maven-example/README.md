@@ -25,7 +25,7 @@ log4shell is just an example, this demo aims at showing the integration of any S
 - Run: `mvn clean verify org.owasp:dependency-check-maven:check sonar:sonar -Dlicense.skip=true`
 - Browse to your project in SonarQube and check the list of vulnerabilities. At least one should be attached to the `pom.xml`file that holds
   the dependency to log4j 2.12.0. You should get something like below
-  ![log4shell CVE reported in SonarQube witha Maven project](log4shell-screenshot.jpg)
+  ![log4shell CVE reported in SonarQube with a Maven project](../log4shell-screenshot.jpg)
 
 - In the [pom.xml](pom.xml#L40) file, you may replace the dependency on log4j 2.12.0 by 2.17.1 (that fixes the log4shell vulnerability)
 
