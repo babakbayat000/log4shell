@@ -17,6 +17,7 @@ sonarqube {
     properties {
         property 'sonar.projectName', 'SCA demo - log4shell detect - Gradle'
         property 'sonar.projectKey', 'demo:sca-log4shell-detect-gradle'
+        property 'sonar.sources', 'src, build.gradle'
         property 'sonar.dependencyCheck.htmlReportPath','build/reports/dependency-check-report.html'
         property 'sonar.dependencyCheck.jsonReportPath','build/reports/dependency-check-report.json'
     }
