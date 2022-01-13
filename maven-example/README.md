@@ -5,8 +5,8 @@ This sample project demoes detection of the log4shell vulnerabilibity with [OWAS
 There's one example with a Maven project and one with a Gradle project
 Both use log4j 2.12.0 that's vulnerable to log4shell (Publicly referenced as [CVE-2021-44228](https://www.cve.org/CVERecord?id=CVE-2021-44228))
 
-Just like most SCA tools, dependency check gets the list of vulenrable libraries from the CVE US [National Vulnerability Database NVD](https://cve.mitre.org/cve/).
-This sites provides this list that can be downloaded/updated at any time.
+Just like most SCA tools, dependency check gets the list of vulnerable libraries from the CVE US [National Vulnerability Database NVD](https://cve.mitre.org/cve/).
+This site provides this list that can be downloaded/updated at any time.
 
 log4shell is just an example, this demo aims at showing the integration of any SCA (Software Composition Analysis) tool with SonarQube, that out of the box only provides SAST (Static Application Security Testing) security
 
@@ -24,7 +24,8 @@ log4shell is just an example, this demo aims at showing the integration of any S
 
 - Run: `mvn clean verify org.owasp:dependency-check-maven:check sonar:sonar -Dlicense.skip=true`
 - Browse to your project in SonarQube and check the list of vulnerabilities. At least one should be attached to the `pom.xml`file that holds
-  the dependency to log4j 2.12.0
+  the dependency to log4j 2.12.0. You should get something like below
+  ![log4shell CVE reported in SonarQube witha Maven project](log4shell-screenshot.jpg)
 
 - In the [pom.xml](pom.xml#L40) file, you may replace the dependency on log4j 2.12.0 by 2.17.1 (that fixes the log4shell vulnerability)
 
