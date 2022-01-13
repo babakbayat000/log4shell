@@ -23,7 +23,8 @@ log4shell is just an example, this demo aims at showing the integration of any S
 
 - Under the `maven-example` directory simply run: `mvn clean verify org.owasp:dependency-check-maven:check sonar:sonar -Dlicense.skip=true`
 - Browse to your project in SonarQube and check the list of vulnerabilities. At least one should be attached to the `pom.xml`file that holds
-  the dependency to log4j 2.12.0
+  the dependency to log4j 2.12.0. You should get something like below
+  ![log4shell CVE reported in SonarQube with a Maven project](log4shell-screenshot.jpg)
 
 - In the [pom.xml](maven-example/pom.xml#L40) file, you may replace the dependency on log4j 2.12.0 by 2.17.1 (that fixes the log4shell vulnerability)
 
@@ -34,7 +35,7 @@ log4shell is just an example, this demo aims at showing the integration of any S
 - Under the `gradle-example` directory simply run: `./gradlew dependencyCheckAnalyze sonarqube`
 
 - Browse to your project in SonarQube and check the list of vulnerabilities. At least one should be attached to project itself that holds
-  the dependency to log4j 2.12.0
+  the dependency to log4j 2.12.0. You will get a similar vulnerability as above reported (see [Gradle readme](gradle-example/README.md) for details)
 
 - In the [build.gradle](gradle-example/build.gradle#L40) file, you may replace the dependency on log4j 2.12.0 by 2.17.1 (that fixes the log4shell vulnerability)
 
